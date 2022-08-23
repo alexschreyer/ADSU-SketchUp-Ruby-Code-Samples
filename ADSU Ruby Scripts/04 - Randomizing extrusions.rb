@@ -18,7 +18,7 @@ sel.each do |e|
   if e.is_a? Sketchup::Face
   
     # Then extrude it
-    e.pushpull rand(100)
+    e.pushpull rand(100), true
     
   end
   
