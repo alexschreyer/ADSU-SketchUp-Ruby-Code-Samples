@@ -23,13 +23,13 @@ comp = group.to_component
 
 # Iterate in all three dimensions
 (0..n).each { |i|
-  (0..n).each { |j|
-    (0..n).each { |k|
-    
-       # Now place copies at final locations using transformation
-       t1 = Geom::Transformation.new [i*s , j*s , k*s] 
-       ent.add_instance comp.definition, t1
-       
+    (0..n).each { |j|
+        (0..n).each { |k|
+
+           # Now place copies at final locations using transformation
+           t1 = Geom::Transformation.new [i*s , j*s , k*s] 
+           ent.add_instance comp.definition, t1
+
+        }
     }
-  }
 }

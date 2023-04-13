@@ -31,6 +31,7 @@ p "RSS feed loaded - at #{Time.now - t}s"
 # Process feed
 collect = URI.extract(cnt, "https")
 collect.reject! {|i| !i.include? "_b.jpg" }
+
 # Convert to lower quality before downloading
 collect.map {|s| s.gsub!('_b.jpg', '_q.jpg')}
 

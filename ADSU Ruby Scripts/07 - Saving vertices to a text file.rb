@@ -17,11 +17,11 @@ verts = []
 # Iterate over the selection and store vertices
 sel.each do |e|
 
-  # Only consider edges
-  if e.is_a? Sketchup::Edge
-    # Add vertices to array
-    verts.push e.vertices
-  end
+    # Only consider edges
+    if e.is_a? Sketchup::Edge
+        # Add vertices to array
+        verts.push e.vertices
+    end
   
 end
 
@@ -36,6 +36,7 @@ filename = UI.savepanel 'Text file for vertex coordinates'
 
 # Write vertices to file
 if filename
+
     f = File.open( filename, 'w' )
     # Write x,y,z coordinates in default units (inches)
     verts.each { |v|
@@ -44,4 +45,5 @@ if filename
                 v.position.z.to_inch , "\n"
     }
     f.close
+    
 end

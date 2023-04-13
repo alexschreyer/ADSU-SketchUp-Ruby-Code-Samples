@@ -13,8 +13,8 @@ sel = mod.selection  # Current selection
 
 s = 28  # x-spacing
 t = 12  # z-spacing
-h = 20  # number in x
-v = 20  # number in z
+h = 20  # Number in x
+v = 20  # Number in z
 max_deg = 90  # Max "opening" angle
 
 # Make sure selection is a component

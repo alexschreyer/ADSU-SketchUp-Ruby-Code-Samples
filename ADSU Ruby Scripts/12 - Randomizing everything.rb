@@ -24,7 +24,7 @@ sel.each { |e|
         center = e.bounds.center
         # Also get the base center for scaling
         base = center.clone
-        z_height = (e.bounds.max.z - e.bounds.min.z)
+        z_height = ( e.bounds.max.z - e.bounds.min.z )
         base.z = base.z - z_height / 2
 
         # Transform this object

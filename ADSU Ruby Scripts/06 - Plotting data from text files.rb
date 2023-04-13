@@ -22,12 +22,16 @@ filename = UI.openpanel 'Select Data File'
 
 # Iterate through all lines in the file and plot the cpoints
 if filename != nil
-  file = File.open filename
-  file.each { |line|
-    if file.lineno >= startline
-      pointXYZ = line.strip.split(',')
-      ent.add_cpoint [pointXYZ[0].to_f , pointXYZ[1].to_f , pointXYZ[2].to_f]
-    end
-  }
-  file.close
+
+    file = File.open filename
+    file.each { |line|
+
+        if file.lineno >= startline
+            pointXYZ = line.strip.split(',')
+            ent.add_cpoint [pointXYZ[0].to_f , pointXYZ[1].to_f , pointXYZ[2].to_f]
+        end
+
+    }
+    file.close
+  
 end

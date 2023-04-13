@@ -14,12 +14,12 @@ sel = mod.selection  # Current selection
 # Iterate through selection
 sel.each do |e|
 
-  # First check if this is a face
-  if e.is_a? Sketchup::Face
-  
-    # Then extrude it
-    e.pushpull rand(100), true
-    
-  end
+    # First check if this is a face
+    if e.is_a? Sketchup::Face
+
+        # Then extrude it
+        e.pushpull rand(100), true
+
+    end
   
 end

@@ -17,14 +17,15 @@ w = 20  # Box width
 
 # Iterate in all three dimensions
 (0..n-1).each { |i|
-  (0..n-1).each { |j|
-    (0..n-1).each { |k|
-    
-      # add a face first
-      face = ent.add_face [i*s,j*s,k*s],[i*s,j*s+w,k*s],[i*s+w,j*s+w,k*s],[i*s+w,j*s,k*s]
-      # then pushpull it to get a box
-      face.pushpull -w
-      
+    (0..n-1).each { |j|
+        (0..n-1).each { |k|
+
+          # add a face first
+          face = ent.add_face [i*s,j*s,k*s] , [i*s,j*s+w,k*s],
+                              [i*s+w,j*s+w,k*s] , [i*s+w,j*s,k*s]
+          # then pushpull it to get a box
+          face.pushpull -w
+
+        }
     }
-  }
 }

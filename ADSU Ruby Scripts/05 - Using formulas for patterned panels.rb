@@ -20,12 +20,12 @@ ent.add_face [0,0,0] , [width,0,0] , [width,width,0] , [0,width,0]
 
 # Iterate in the panel plane
 (0..n-1).each { |i|
-  (0..n-1).each { |j|
+    (0..n-1).each { |j|
 
-    # Add the circles
-    radius = Math::sin( i / (n-1).to_f * Math::PI ) * s / 5.0 + 
-             Math::sin( j / (n-1).to_f * Math::PI ) * s / 5.0
-    ent.add_circle [s+i*s,s+j*s,0] , [0,0,1] , radius
+        # Add the circles
+        radius = Math::sin( i / (n-1).to_f * Math::PI ) * s / 5.0 + 
+                 Math::sin( j / (n-1).to_f * Math::PI ) * s / 5.0
+        ent.add_circle [s+i*s,s+j*s,0] , [0,0,1] , radius
 
-  }
+    }
 }
